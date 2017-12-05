@@ -15,4 +15,13 @@ class DefaultController extends Controller
     {
 	    return $this->render('hello.html.twig');
     }
+	
+	/**
+	 * @Route("/truth", name="homepage")
+	 */
+	public function truthAction(Request $request)
+	{
+		return $this->render('truth.html.twig');
+	}
+ 
 }
