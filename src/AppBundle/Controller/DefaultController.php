@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 	
 	/**
-	 * @Route("/truth", name="homepage")
+	 * @Route("/truth", name="truth")
 	 */
 	public function truthAction(Request $request)
 	{
