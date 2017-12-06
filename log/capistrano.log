@@ -317,3 +317,8 @@
   INFO [db326af2] Running /usr/bin/env echo "Branch master (at c86baf46b3b154adea4cf58624276b8e265ae851) deployed as release 20171206131251 by natha" >> /var/www/git/sf-try/revisions.log as deploy@46.101.245.4
  DEBUG [db326af2] Command: cd /var/www/git/sf-try/releases && /usr/bin/env echo "Branch master (at c86baf46b3b154adea4cf58624276b8e265ae851) deployed as release 20171206131251 by natha" >> /var/www/git/sf-try/revisions.log
   INFO [db326af2] Finished in 0.468 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-06 14:50:39 +0100 cap prod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3ea791d6] Running /usr/bin/env mkdir -p /tmp as deploy@46.101.245.4
+ DEBUG [3ea791d6] Command: /usr/bin/env mkdir -p /tmp

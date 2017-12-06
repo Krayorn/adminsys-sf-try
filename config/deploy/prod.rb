@@ -24,8 +24,6 @@ role :app, %w{deploy@46.101.245.4:22}
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/git/sf-try"
-set :log_level, ENV['LOG_LEVEL']
-set :format, :pretty
 
 # Configuration
 # =============
