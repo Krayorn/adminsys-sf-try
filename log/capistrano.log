@@ -1,0 +1,240 @@
+# Logfile created on 2017-12-06 12:35:27 +0100 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-06 12:35:27 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-06 12:44:55 +0100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5b871343] Running /usr/bin/env mkdir -p /tmp as deploy@46.101.245.4
+ DEBUG [5b871343] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5b871343] Finished in 7.074 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-sf-try-staging-natha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-sf-try-staging-natha.sh 100.0%
+  INFO [a2755e2b] Running /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh as deploy@46.101.245.4
+ DEBUG [a2755e2b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh
+  INFO [a2755e2b] Finished in 0.241 seconds with exit status 0 (successful).
+  INFO [f5b290d9] Running /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD as deploy@46.101.245.4
+ DEBUG [f5b290d9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD )
+ DEBUG [f5b290d9] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd	HEAD
+  INFO [f5b290d9] Finished in 3.215 seconds with exit status 0 (successful).
+  INFO [901ede7b] Running /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [901ede7b] Command: /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases
+  INFO [901ede7b] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [965ce80e] Running [ -f /var/www/git/sf-try/current/REVISION ] as deploy@46.101.245.4
+ DEBUG [965ce80e] Command: [ -f /var/www/git/sf-try/current/REVISION ]
+ DEBUG [965ce80e] Finished in 0.172 seconds with exit status 1 (failed).
+ DEBUG [1d788081] Running [ -f /var/www/git/sf-try/repo/HEAD ] as deploy@46.101.245.4
+ DEBUG [1d788081] Command: [ -f /var/www/git/sf-try/repo/HEAD ]
+ DEBUG [1d788081] Finished in 0.118 seconds with exit status 1 (failed).
+ DEBUG [5c0490cb] Running if test ! -d /var/www/git/sf-try; then echo "Directory does not exist '/var/www/git/sf-try'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [5c0490cb] Command: if test ! -d /var/www/git/sf-try; then echo "Directory does not exist '/var/www/git/sf-try'" 1>&2; false; fi
+ DEBUG [5c0490cb] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [34ed9cee] Running /usr/bin/env git clone --mirror git@github.com:Krayorn/sf-try.git /var/www/git/sf-try/repo as deploy@46.101.245.4
+ DEBUG [34ed9cee] Command: cd /var/www/git/sf-try && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git clone --mirror git@github.com:Krayorn/sf-try.git /var/www/git/sf-try/repo )
+ DEBUG [34ed9cee] 	Cloning into bare repository '/var/www/git/sf-try/repo'...
+  INFO [34ed9cee] Finished in 1.775 seconds with exit status 0 (successful).
+ DEBUG [8e4998ac] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [8e4998ac] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [8e4998ac] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [085bc2d0] Running /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git as deploy@46.101.245.4
+ DEBUG [085bc2d0] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git )
+  INFO [085bc2d0] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO [6be92205] Running /usr/bin/env git remote update --prune as deploy@46.101.245.4
+ DEBUG [6be92205] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6be92205] 	Fetching origin
+  INFO [6be92205] Finished in 1.469 seconds with exit status 0 (successful).
+ DEBUG [98194d2f] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [98194d2f] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [98194d2f] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [128d7005] Running /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206114506 as deploy@46.101.245.4
+ DEBUG [128d7005] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206114506 )
+  INFO [128d7005] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [5d0c023f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206114506 as deploy@46.101.245.4
+ DEBUG [5d0c023f] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206114506 )
+  INFO [5d0c023f] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [f126dd5f] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [f126dd5f] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [f126dd5f] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [a2317f47] Running /usr/bin/env git rev-list --max-count=1 master as deploy@46.101.245.4
+ DEBUG [a2317f47] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a2317f47] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd
+ DEBUG [a2317f47] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [eb00d6d0] Running if test ! -d /var/www/git/sf-try/releases/20171206114506; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206114506'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [eb00d6d0] Command: if test ! -d /var/www/git/sf-try/releases/20171206114506; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206114506'" 1>&2; false; fi
+ DEBUG [eb00d6d0] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [0e67e2bd] Running /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION as deploy@46.101.245.4
+ DEBUG [0e67e2bd] Command: cd /var/www/git/sf-try/releases/20171206114506 && /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION
+  INFO [0e67e2bd] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [db786a0d] Running /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206114506 /var/www/git/sf-try/releases/current as deploy@46.101.245.4
+ DEBUG [db786a0d] Command: /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206114506 /var/www/git/sf-try/releases/current
+  INFO [db786a0d] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [cd344d52] Running /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try as deploy@46.101.245.4
+ DEBUG [cd344d52] Command: /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try
+  INFO [cd344d52] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [e66f34ad] Running /usr/bin/env ls -x /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [e66f34ad] Command: /usr/bin/env ls -x /var/www/git/sf-try/releases
+ DEBUG [e66f34ad] 	20171206114506
+ DEBUG [e66f34ad] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [f827bbcd] Running if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [f827bbcd] Command: if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi
+ DEBUG [f827bbcd] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [5dea909b] Running /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206114506 by natha" >> /var/www/git/sf-try/revisions.log as deploy@46.101.245.4
+ DEBUG [5dea909b] Command: cd /var/www/git/sf-try/releases && /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206114506 by natha" >> /var/www/git/sf-try/revisions.log
+  INFO [5dea909b] Finished in 0.192 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-06 12:49:45 +0100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bb628a14] Running /usr/bin/env mkdir -p /tmp as deploy@46.101.245.4
+ DEBUG [bb628a14] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bb628a14] Finished in 11.102 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-sf-try-staging-natha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-sf-try-staging-natha.sh 100.0%
+  INFO [ad383257] Running /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh as deploy@46.101.245.4
+ DEBUG [ad383257] Command: /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh
+  INFO [ad383257] Finished in 0.234 seconds with exit status 0 (successful).
+  INFO [ab8b0e53] Running /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD as deploy@46.101.245.4
+ DEBUG [ab8b0e53] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD )
+ DEBUG [ab8b0e53] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd	HEAD
+  INFO [ab8b0e53] Finished in 1.497 seconds with exit status 0 (successful).
+  INFO [b836a84b] Running /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [b836a84b] Command: /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases
+  INFO [b836a84b] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [e57153b9] Running [ -f /var/www/git/sf-try/current/REVISION ] as deploy@46.101.245.4
+ DEBUG [e57153b9] Command: [ -f /var/www/git/sf-try/current/REVISION ]
+ DEBUG [e57153b9] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [a2f662c9] Running [ -f /var/www/git/sf-try/repo/HEAD ] as deploy@46.101.245.4
+ DEBUG [a2f662c9] Command: [ -f /var/www/git/sf-try/repo/HEAD ]
+ DEBUG [a2f662c9] Finished in 0.297 seconds with exit status 1 (failed).
+ DEBUG [a7a7a1c2] Running if test ! -d /var/www/git/sf-try; then echo "Directory does not exist '/var/www/git/sf-try'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [a7a7a1c2] Command: if test ! -d /var/www/git/sf-try; then echo "Directory does not exist '/var/www/git/sf-try'" 1>&2; false; fi
+ DEBUG [a7a7a1c2] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [5f6f6a94] Running /usr/bin/env git clone --mirror git@github.com:Krayorn/sf-try.git /var/www/git/sf-try/repo as deploy@46.101.245.4
+ DEBUG [5f6f6a94] Command: cd /var/www/git/sf-try && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git clone --mirror git@github.com:Krayorn/sf-try.git /var/www/git/sf-try/repo )
+ DEBUG [5f6f6a94] 	Cloning into bare repository '/var/www/git/sf-try/repo'...
+  INFO [5f6f6a94] Finished in 5.751 seconds with exit status 0 (successful).
+ DEBUG [dca21ebe] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [dca21ebe] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [dca21ebe] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [ad7d146e] Running /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git as deploy@46.101.245.4
+ DEBUG [ad7d146e] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git )
+  INFO [ad7d146e] Finished in 0.235 seconds with exit status 0 (successful).
+  INFO [af7e71f5] Running /usr/bin/env git remote update --prune as deploy@46.101.245.4
+ DEBUG [af7e71f5] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [af7e71f5] 	Fetching origin
+  INFO [af7e71f5] Finished in 2.108 seconds with exit status 0 (successful).
+ DEBUG [df48ad8f] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [df48ad8f] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [df48ad8f] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [6864c480] Running /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206114959 as deploy@46.101.245.4
+ DEBUG [6864c480] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206114959 )
+  INFO [6864c480] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [fefbe872] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206114959 as deploy@46.101.245.4
+ DEBUG [fefbe872] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206114959 )
+  INFO [fefbe872] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [b0f298ee] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [b0f298ee] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [b0f298ee] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [f677f116] Running /usr/bin/env git rev-list --max-count=1 master as deploy@46.101.245.4
+ DEBUG [f677f116] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f677f116] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd
+ DEBUG [f677f116] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [ab4f6afd] Running if test ! -d /var/www/git/sf-try/releases/20171206114959; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206114959'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [ab4f6afd] Command: if test ! -d /var/www/git/sf-try/releases/20171206114959; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206114959'" 1>&2; false; fi
+ DEBUG [ab4f6afd] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [c2177c19] Running /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION as deploy@46.101.245.4
+ DEBUG [c2177c19] Command: cd /var/www/git/sf-try/releases/20171206114959 && /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION
+  INFO [c2177c19] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [e63f1a95] Running /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206114959 /var/www/git/sf-try/releases/current as deploy@46.101.245.4
+ DEBUG [e63f1a95] Command: /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206114959 /var/www/git/sf-try/releases/current
+  INFO [e63f1a95] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [b8694135] Running /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try as deploy@46.101.245.4
+ DEBUG [b8694135] Command: /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try
+  INFO [b8694135] Finished in 0.141 seconds with exit status 0 (successful).
+ DEBUG [4c5ff46f] Running /usr/bin/env ls -x /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [4c5ff46f] Command: /usr/bin/env ls -x /var/www/git/sf-try/releases
+ DEBUG [4c5ff46f] 	20171206114959
+ DEBUG [4c5ff46f] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [ff637f24] Running if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [ff637f24] Command: if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi
+ DEBUG [ff637f24] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [899c8ac2] Running /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206114959 by natha" >> /var/www/git/sf-try/revisions.log as deploy@46.101.245.4
+ DEBUG [899c8ac2] Command: cd /var/www/git/sf-try/releases && /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206114959 by natha" >> /var/www/git/sf-try/revisions.log
+  INFO [899c8ac2] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-06 14:10:00 +0100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6882ecc4] Running /usr/bin/env mkdir -p /tmp as deploy@46.101.245.4
+ DEBUG [6882ecc4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6882ecc4] Finished in 9.317 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-sf-try-staging-natha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-sf-try-staging-natha.sh 100.0%
+  INFO [52d80c38] Running /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh as deploy@46.101.245.4
+ DEBUG [52d80c38] Command: /usr/bin/env chmod 700 /tmp/git-ssh-sf-try-staging-natha.sh
+  INFO [52d80c38] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [358ee49b] Running /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD as deploy@46.101.245.4
+ DEBUG [358ee49b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git ls-remote git@github.com:Krayorn/sf-try.git HEAD )
+ DEBUG [358ee49b] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd	HEAD
+  INFO [358ee49b] Finished in 1.424 seconds with exit status 0 (successful).
+  INFO [e413f3d3] Running /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [e413f3d3] Command: /usr/bin/env mkdir -p /var/www/git/sf-try/shared /var/www/git/sf-try/releases
+  INFO [e413f3d3] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [149975cc] Running [ -f /var/www/git/sf-try/current/REVISION ] as deploy@46.101.245.4
+ DEBUG [149975cc] Command: [ -f /var/www/git/sf-try/current/REVISION ]
+ DEBUG [149975cc] Finished in 0.459 seconds with exit status 0 (successful).
+ DEBUG [9417a54f] Running /usr/bin/env cat /var/www/git/sf-try/current/REVISION 2>/dev/null as deploy@46.101.245.4
+ DEBUG [9417a54f] Command: /usr/bin/env cat /var/www/git/sf-try/current/REVISION 2>/dev/null
+ DEBUG [9417a54f] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd
+ DEBUG [9417a54f] Finished in 0.265 seconds with exit status 0 (successful).
+ DEBUG [2a562a70] Running [ -f /var/www/git/sf-try/repo/HEAD ] as deploy@46.101.245.4
+ DEBUG [2a562a70] Command: [ -f /var/www/git/sf-try/repo/HEAD ]
+ DEBUG [2a562a70] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/git/sf-try/repo
+ DEBUG [ac36c65a] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [ac36c65a] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [ac36c65a] Finished in 0.274 seconds with exit status 0 (successful).
+  INFO [fcaa68d9] Running /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git as deploy@46.101.245.4
+ DEBUG [fcaa68d9] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote set-url origin git@github.com:Krayorn/sf-try.git )
+  INFO [fcaa68d9] Finished in 0.202 seconds with exit status 0 (successful).
+  INFO [28a3363b] Running /usr/bin/env git remote update --prune as deploy@46.101.245.4
+ DEBUG [28a3363b] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [28a3363b] 	Fetching origin
+ DEBUG [28a3363b] 	Warning: Permanently added the RSA host key for IP address '192.30.255.113' to the list of known hosts.
+  INFO [28a3363b] Finished in 2.383 seconds with exit status 0 (successful).
+ DEBUG [865a6dbf] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [865a6dbf] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [865a6dbf] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [dc2bfed0] Running /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206131013 as deploy@46.101.245.4
+ DEBUG [dc2bfed0] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env mkdir -p /var/www/git/sf-try/releases/20171206131013 )
+  INFO [dc2bfed0] Finished in 0.331 seconds with exit status 0 (successful).
+  INFO [bab952ff] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206131013 as deploy@46.101.245.4
+ DEBUG [bab952ff] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/git/sf-try/releases/20171206131013 )
+  INFO [bab952ff] Finished in 0.232 seconds with exit status 0 (successful).
+ DEBUG [29f04b34] Running if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [29f04b34] Command: if test ! -d /var/www/git/sf-try/repo; then echo "Directory does not exist '/var/www/git/sf-try/repo'" 1>&2; false; fi
+ DEBUG [29f04b34] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [0c83781f] Running /usr/bin/env git rev-list --max-count=1 master as deploy@46.101.245.4
+ DEBUG [0c83781f] Command: cd /var/www/git/sf-try/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-sf-try-staging-natha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0c83781f] 	f71c0e3fadb098aafc9830e2360529cfd9a148dd
+ DEBUG [0c83781f] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [05aaa7d0] Running if test ! -d /var/www/git/sf-try/releases/20171206131013; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206131013'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [05aaa7d0] Command: if test ! -d /var/www/git/sf-try/releases/20171206131013; then echo "Directory does not exist '/var/www/git/sf-try/releases/20171206131013'" 1>&2; false; fi
+ DEBUG [05aaa7d0] Finished in 0.265 seconds with exit status 0 (successful).
+  INFO [4c454c48] Running /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION as deploy@46.101.245.4
+ DEBUG [4c454c48] Command: cd /var/www/git/sf-try/releases/20171206131013 && /usr/bin/env echo "f71c0e3fadb098aafc9830e2360529cfd9a148dd" >> REVISION
+  INFO [4c454c48] Finished in 0.286 seconds with exit status 0 (successful).
+  INFO [70bc0647] Running /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206131013 /var/www/git/sf-try/releases/current as deploy@46.101.245.4
+ DEBUG [70bc0647] Command: /usr/bin/env ln -s /var/www/git/sf-try/releases/20171206131013 /var/www/git/sf-try/releases/current
+  INFO [70bc0647] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [32b1a419] Running /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try as deploy@46.101.245.4
+ DEBUG [32b1a419] Command: /usr/bin/env mv /var/www/git/sf-try/releases/current /var/www/git/sf-try
+  INFO [32b1a419] Finished in 0.312 seconds with exit status 0 (successful).
+ DEBUG [33f02c2d] Running /usr/bin/env ls -x /var/www/git/sf-try/releases as deploy@46.101.245.4
+ DEBUG [33f02c2d] Command: /usr/bin/env ls -x /var/www/git/sf-try/releases
+ DEBUG [33f02c2d] 	20171206114959	20171206131013
+ DEBUG [33f02c2d] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [d1d04a8d] Running if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi as deploy@46.101.245.4
+ DEBUG [d1d04a8d] Command: if test ! -d /var/www/git/sf-try/releases; then echo "Directory does not exist '/var/www/git/sf-try/releases'" 1>&2; false; fi
+ DEBUG [d1d04a8d] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [3d97160c] Running /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206131013 by natha" >> /var/www/git/sf-try/revisions.log as deploy@46.101.245.4
+ DEBUG [3d97160c] Command: cd /var/www/git/sf-try/releases && /usr/bin/env echo "Branch master (at f71c0e3fadb098aafc9830e2360529cfd9a148dd) deployed as release 20171206131013 by natha" >> /var/www/git/sf-try/revisions.log
+  INFO [3d97160c] Finished in 0.296 seconds with exit status 0 (successful).

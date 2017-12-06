@@ -17,11 +17,13 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deploy@example.com}, my_property: :my_value
+role :app, %w{deploy@46.101.245.4:22}
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
 
+# Default deploy_to directory is /var/www/my_app_name
+set :deploy_to, "/var/www/git/sf-try"
 
 # Configuration
 # =============
@@ -49,13 +51,13 @@ role :app, %w{deploy@example.com}, my_property: :my_value
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server "46.101.245.4",
-  user: "deploy",
-  roles: %w{app},
-  ssh_options: {
-    user: "deploy", # overrides user setting above
-    keys: %w(/home/deploy/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(password)
-    password: "deploypass"
-  }
+# server "46.101.245.4",
+#   user: "deploy",
+#   roles: %w{app},
+#   ssh_options: {
+#     user: "deploy", # overrides user setting above
+#     keys: %w(/home/deploy/.ssh/id_rsa),
+#     forward_agent: false,
+#     auth_methods: %w(password)
+#     password: ""
+#   }
