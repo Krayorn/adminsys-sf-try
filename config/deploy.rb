@@ -2,7 +2,7 @@
 lock "~> 3.10.0"
 
 set :application, "sf-try"
-set :repo_url, "git@github.com:Krayorn/sf-try.git"
+set :repo_url, "git@github.com:Krayorn/adminsys-sf-try.git"
 set :branch, 'master'
 
 # Default branch is :master
